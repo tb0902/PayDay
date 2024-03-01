@@ -47,7 +47,7 @@ public class PayDay {
         double grossPay = worked * rate;
         double deducted = grossPay * deduct;
         double netPay = grossPay - deducted;
-        result = String.format("%s %.2f %.2f %.2f", n, rate, worked, deduct);
+        result = String.format("%s %.2f %.2f %.2f", n, grossPay, deducted, netPay);
         return result;
     }
 
