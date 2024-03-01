@@ -43,7 +43,12 @@ public class PayDay {
      * @return a string of the form "Kris 215.00 10.75 204.25”
      */
     public String pay(String n, double rate, double worked, double deduct) {
-        return null;
+        String result;
+        double grossPay = worked * rate;
+        double deducted = grossPay * deduct;
+        double netPay = grossPay - deducted;
+        result = String.format("%s %.2f %.2f %.2f", n, rate, worked, deduct);
+        return result;
     }
 
 
